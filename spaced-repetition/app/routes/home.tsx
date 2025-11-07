@@ -1,13 +1,13 @@
+import { QuestionGenerator } from "~/components/question-generator";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Question Generator" },
+    { name: "description", content: "Welcome to the Question Generator!" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (<QuestionGenerator />);
 }
