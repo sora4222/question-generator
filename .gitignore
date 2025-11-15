@@ -9,3 +9,7 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Typescript files
+node_modules/
+.ruff_cache/
