@@ -1,21 +1,25 @@
 [project]
 name = "question-generator"
 version = "0.1.0"
-description = "Add your description here"
+description = "Generates questions on topics the user provides information"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.121.0",
-    "langchain>=0.3.26",
+    "langchain>=1.0.0",
     "langchain-community>=0.3.26",
     "langchain-ollama>=0.3.3",
     "langchain-text-splitters>=0.3.8",
-    "langgraph>=0.5.0",
+    "langgraph==1.0.3",
     "notion-client>=2.4.0",
+    "notion-common",
     "pillow>=11.2.1",
 ]
 
 [dependency-groups]
 dev = [
-    "ruff>=0.12.1",
+    "ruff>=0.14.5",
 ]
+
+[tool.uv.sources]
+notion-common = { path = "../notion_common" }
